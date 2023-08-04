@@ -2,6 +2,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, List, ListItem, Typo
 import React from 'react'
 import TypeWriterEffect from 'react-typewriter-effect'
 import pdf from '../imagenes/CVjdf.pdf'
+import fondo from '../imagenes/fondo.PNG'
 import "../App.css"
 
 const Initial = ({ title, id, dark }) => {
@@ -9,34 +10,36 @@ const Initial = ({ title, id, dark }) => {
     const classes = useStyles();       
     return (
         <>
-            <div className={ `${classes.section} ${ dark && classes.sectiondark }` }>                 
+            <div className={ `${classes.section} ${ dark && classes.sectiondark }` }>
+                <div className={classes.backgroundImage} style={{ backgroundImage: `url(${fondo})` }}>                 
                     <Card className={ classes.card1 }> 
-                            <CardContent className={ classes.cardcontent }>
-                                <div className={ classes.divcontent1 }>
-                                    <TypeWriterEffect 
-                                        text="Hi, I'm Juan David"
-                                        textStyle= { {fontSize: "3rem", fontWeight: "700px", color: "white", fontFamily: "Monospace"} }
-                                        startDelay={ 100 }
-                                        cursorColor="black"
-                                        typeSpeed={ 50 }
-                                    />
-                                    <TypeWriterEffect                             
-                                        text="Front End Developer..."
-                                        textStyle= { {fontSize: "3rem", fontWeight: "500px", color:"white", fontFamily: "Monospace"} }
-                                        startDelay={ 1200 }
-                                        cursorColor="black"
-                                        typeSpeed={ 50 }
-                                    />
-                                </div>    
-                            </CardContent>
-                            <CardActions>
-                                <Button variant="contained" className={ classes.pdfbutton}>
-                                    <a href={ pdf } download>
-                                        Download CV
-                                    </a>
-                                </Button>
-                            </CardActions>
-                    </Card>       
+                        <CardContent className={ classes.cardcontent }>
+                            <div className={ classes.divcontent1 }>
+                                <TypeWriterEffect 
+                                    text="Hi, I'm Juan David"
+                                    textStyle= { {fontSize: "3rem", fontWeight: "700px", color: "white", fontFamily: "Monospace"} }
+                                    startDelay={ 100 }
+                                    cursorColor="black"
+                                    typeSpeed={ 50 }
+                                />
+                                <TypeWriterEffect                             
+                                    text="Front End Developer..."
+                                    textStyle= { {fontSize: "3rem", fontWeight: "500px", color:"white", fontFamily: "Monospace"} }
+                                    startDelay={ 1200 }
+                                    cursorColor="black"
+                                    typeSpeed={ 50 }
+                                />
+                            </div>    
+                        </CardContent>  
+                        <CardActions>
+                            <Button variant="contained" className={ classes.pdfbutton}>
+                                <a href={ pdf } download>
+                                    Download CV
+                                </a>
+                            </Button>
+                        </CardActions>
+                    </Card>  
+                </div>     
             </div>
         </>    
   )
@@ -106,6 +109,9 @@ const useStyles = makeStyles((theme) => ({
             right: "4rem",
         },
         
+    },
+    backgroundImage: {
+        width: "auto"
     }
   }))
 

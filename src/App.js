@@ -8,6 +8,7 @@ import Contact1 from "./components/Contact1";
 import MatrixRain from './components/MatrixRain'
 import "./App.css"
 
+
 const theme = createTheme({
   palette: {
     primary: { main: "#000023" },
@@ -22,7 +23,6 @@ function App() {
         <MuiThemeProvider theme= { theme }>
         <NavBar/>
           <div >
-          <MatrixRain />
             <Inital title="Initial" id="about" dark={true}/>
             <About title="About me" id="about" dark={true} />
             <Skills title="My skills" id="skills" dark={true} />

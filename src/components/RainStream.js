@@ -69,4 +69,3 @@ const MatrixRainingLetters = (props) => {
 };
 
 export default MatrixRainingLetters;
-
