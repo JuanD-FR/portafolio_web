@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { MuiThemeProvider, createTheme, makeStyles } from "@material-ui/core";
+import NavBar from "./components/NavBar";
+import Inital from "./components/Initial";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import MyWork from "./components/MyWork";
+import Contact from "./components/Contact";
+import Contact1 from "./components/Contact1";
+import MatrixRain from './components/MatrixRain'
+import "./App.css"
+import useMediaQuery from "./components/useMediaQuery";
+
+const theme = createTheme({
+  palette: {
+    primary: { main: "#000023" },
+    secondary: { main: "#313591" }
+  }
+})
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <MuiThemeProvider theme= { theme }>
+        <NavBar/>
+          <div >
+          <MatrixRain />
+            <Inital title="Initial" id="about" dark={true}/>
+            <About title="About me" id="about" dark={true} />
+            <Skills title="My skills" id="skills" dark={true} />
+            <MyWork title="My work" id="work" dark={true} />
+            <Contact1 title="Contact" id="contact" dark={true} />
+          </div>
+        </MuiThemeProvider>
+    </>
   );
-}
+};
+  
+const useStyles = makeStyles((theme) => ({
+  root: {
+  },
+}))
 
 export default App;
