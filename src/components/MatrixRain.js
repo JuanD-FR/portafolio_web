@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex", 
     justifyContent: "center", 
     alignItems: "center", 
+    zIndex: 1
   },
 }));
 

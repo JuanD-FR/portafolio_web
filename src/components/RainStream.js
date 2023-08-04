@@ -1,9 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
-
 import "../styles/styles.css";
-
 
 const renderMatrix = (ref) => {
     let canvas = ref.current;
