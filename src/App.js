@@ -4,11 +4,9 @@ import Inital from "./components/Initial";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import MyWork from "./components/MyWork";
-import Contact from "./components/Contact";
 import Contact1 from "./components/Contact1";
 import MatrixRain from './components/MatrixRain'
 import "./App.css"
-import useMediaQuery from "./components/useMediaQuery";
 
 const theme = createTheme({
   palette: {
