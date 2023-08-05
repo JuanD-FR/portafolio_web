@@ -28,13 +28,29 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "monospace",  
     },
   letra: {
-        color: "white",
-        textShadow: "0px 0px 8px #5E45E8",
-        fontFamily: "monospace", 
-        backgroundColor: "#131b63",
-        paddingLeft: theme.spacing(13),
-        paddingTop: theme.spacing(9),
-  },
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "left",
+    color: "white",
+    textShadow: "0px 0px 8px #5E45E8",
+    backgroundColor: "#131b63",
+    fontFamily: "monospace",
+    paddingLeft: theme.spacing(7),
+    paddingTop: theme.spacing(7),
+    "& h3":{
+        [theme.breakpoints.down("md")]: {
+            fontSize: "2.5rem"
+        },
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "1.5rem",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+        },
+    }
+},
   }))
 
 export default Skills

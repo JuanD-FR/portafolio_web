@@ -128,10 +128,21 @@ const useStyles = makeStyles((theme) => ({
     wrap: {
         display: "flex",
         textAlign: "center",
-        marginLeft: "10%",
-        marginRight: "10%",
-        paddingTop: "5%",
-        paddingBottom: theme.spacing(8)
+        justifyContent: "center",
+        alignItems: "center",
+        paddingTop: theme.spacing(5),
+        paddingRight: theme.spacing(5),
+        paddingBottom: theme.spacing(8),
+        [theme.breakpoints.down("md")]: {
+            paddingTop: theme.spacing(5),
+            paddingRight: theme.spacing(5),
+            paddingBottom: theme.spacing(8),
+        },
+        [theme.breakpoints.down("sm")]: {
+            paddingTop: theme.spacing(5),
+            paddingRight: theme.spacing(5),
+            paddingBottom: theme.spacing(8),
+        },
     },
     año: {
         maxWidth: "20%",
