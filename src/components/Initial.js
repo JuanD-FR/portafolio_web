@@ -28,14 +28,16 @@ const Initial = ({ title, id, dark }) => {
                                     typeSpeed={ 50 }
                                 />
                             </div>    
-                        </CardContent>  
-                        <CardActions>
-                            <Button variant="contained" className={ classes.pdfbutton}>
-                                <a href={ pdf } download>
-                                    Download CV
-                                </a>
-                            </Button>
-                        </CardActions>
+                        </CardContent> 
+                        <div className={ classes.buttonContainer }> 
+                            <CardActions>                               
+                                <Button variant="contained" className={ classes.pdfbutton}>
+                                    <a href={ pdf } download>
+                                        Download CV 
+                                    </a>
+                                </Button>               
+                            </CardActions>
+                        </div>
                     </Card>  
                 </div>     
             </div>
@@ -57,6 +59,13 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         position: "relative",
         backgroundColor: "transparent",
+        [theme.breakpoints.down("sm")]: {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            height: "50vh",
+            paddingBottom: theme.spacing(5)
+        },
     },
     cardcontent: {
         display: "flex",
@@ -79,12 +88,11 @@ const useStyles = makeStyles((theme) => ({
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginTop: theme.spacing(-5)
         },
     },
     pdfbutton: {
         position: "absolute",
-        bottom: "2rem",
-        right: "4rem",
         border: "2px solid white",
         backgroundColor: "#000023",
         padding: theme.spacing(1,3,1,3),
@@ -99,6 +107,16 @@ const useStyles = makeStyles((theme) => ({
         "& a:hover": {
             color: "#fff"
         },
+        [theme.breakpoints.down("lg")]: {
+            bottom: "2rem",
+            right: "4rem",
+        },
+        [theme.breakpoints.down("sm")]: {
+            marginBottom: theme.spacing(4),
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          },
     },
     backgroundImage: {
         width: "auto"

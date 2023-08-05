@@ -58,13 +58,13 @@ const Technologies = (dark) => {
             stars: 3
         },
         {
-            year: "---",
+            year: "20xx",
             src: java,
             title: "Java / por cursar",
             stars: 0
         },
         {
-            year: "---",
+            year: "20xx",
             src: angular,
             title: "Angular / por cursar",
             stars: 0

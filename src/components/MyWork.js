@@ -23,11 +23,14 @@ const MyWork = ({ title, id, dark }) => {
   return (
     <div className={ `${classes.section} ${ dark && classes.sectiondark }` }>
       <div className={ classes.sectioncontent } id={ id }>
-        <Typography variant="h3" className={ classes.titulo }>{ title }</Typography>
+        <div className={ classes.contenedorTitulo }>
+          <Typography variant="h3" className={ classes.titulo }>{ title }</Typography>
+        </div>  
         <Grid container className={ classes.grid }>
           {
             mockData.map(({ title, image, link, description, description1}, index) => (
               <Grid item key={ index } xs={ 12 } sm={ 6 } md={ 4 }>
+                <div className={ classes.contenedorCard }>
                 <Card className={ classes.card }>
                   <CardMedia image={ image } className={ classes.caratula } titulo="caratula"/>
                   <CardContent>
@@ -42,11 +45,14 @@ const MyWork = ({ title, id, dark }) => {
                         Read more
                       </Link>
                     </Typography>
-                    <Button onClick={() => handleButtonClick(link)} className={classes.button}>
-                      See project
-                    </Button>
+                    <div className={ classes.botonContenedor }>
+                      <Button onClick={() => handleButtonClick(link)} className={classes.button}>
+                        See project
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
+                </div>
               </Grid>
             ))
           }
@@ -58,9 +64,11 @@ const MyWork = ({ title, id, dark }) => {
             <Typography id="modal-modal-title" variant="h6" component="h2">
               {modalData.title}
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              {modalData.description1}
-            </Typography>
+            <div className={classes.contenedorDescription}>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                {modalData.description1}
+              </Typography>
+            </div>
             <div className={ classes.container }>
             {modalData.link && (
               <Link onClick={() => handleButtonClick(modalData.link)} className={classes.link3}>
@@ -107,6 +115,12 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: theme.spacing(1),
       paddingRight: theme.spacing(1),
     },
+    contenedorCard: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
     caratula: {
       width: "50%",
       height: "100%",
@@ -135,13 +149,36 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center"
     },
     titulo: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "flex-start",
+      alignItems: "left",
       color: "white",
       textShadow: "0px 0px 8px #5E45E8",
-      textAlign: "left",
-      fontFamily: "monospace",
-      marginLeft: theme.spacing(5),
       marginTop: theme.spacing(6),
+      marginBottom: theme.spacing(-5),
+      fontFamily: "monospace",
     },
+    contenedorTitulo: {
+      "& h3":{
+        [theme.breakpoints.down("lg")]: {
+          fontSize: "3rem",
+        },
+        [theme.breakpoints.down("md")]: {
+          fontSize: "3rem",
+        },
+        [theme.breakpoints.down("sm")]: {
+          fontSize: "2rem",
+          paddingLeft: theme.spacing(0),
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          marginLeft: "auto", 
+          marginRight: "auto", 
+      },
+    }
+  },
     titulo2: {
       display: "flex",
       justifyContent: "center",
@@ -150,7 +187,6 @@ const useStyles = makeStyles((theme) => ({
       textLastAlign: "left",
       color: "white",
       fontWeight: "bold"
-      
     },
     descripcion: {
       display: "flex",
@@ -162,29 +198,50 @@ const useStyles = makeStyles((theme) => ({
     },
     modal: {
       position: "absolute",
-      width: 400,
       backgroundColor: "#000023",
       border: "2px solid #446eff",
       borderRadius: "12px",
-      padding: theme.spacing(2,4,3),
       top: "50%",
       left: "50%",
       transform: "translate(-50%, -50%)",
       color: "white",
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "2rem",
+        padding: theme.spacing(2,4,3),
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center", 
+        width:  400
+      },
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "2rem",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center", 
+        width:  200
+    },
     },
     button: {
       border: "2px solid white",
       color: "white",
       marginTop: theme.spacing(2),
-      marginLeft: theme.spacing(12),
-      display: "flex",
-      justifyContent: "center",
-      textAlign: "center",
-      textLastAlign: "center",
       "&:hover": {
         backgroundColor: "#446eff",
       }
     },
+    botonContenedor: { 
+      display: "flex",
+      justifyContent: "center",
+      textAlign: "center",
+    },
+    contenedorDescription: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center", 
+      textAlign: "center",
+      paddingTop: theme.spacing(1)
+    }
   }))
 
 export default MyWork

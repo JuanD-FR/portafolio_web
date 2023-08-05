@@ -12,7 +12,9 @@ const Contact1 = ({ title, id, dark }) => {
   return (
     <div className={ `${classes.section} ${ dark && classes.sectiondark }` }>
       <div className={ classes.sectioncontent } id={ id }>
-        <Typography variant="h3" className={ classes.titulo }>{ title }</Typography>
+        <div className={ classes.contenedorTitulo }>
+          <Typography variant="h3" className={ classes.titulo }>{ title }</Typography>
+        </div>       
           <div className={ classes.titleandchoices }>
             <Typography variant="h5">
               GET IN TOUCH!
@@ -60,12 +62,8 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
         "& h3": {
           marginTop: theme.spacing(6),
-            [theme.breakpoints.down("sm")]: {
-                display: "none",
-            },
         },
-        fontFamily: "monospace",
-        paddingLeft: theme.spacing(3),
+        fontFamily: "monospace",  
     },
     titleandchoices: {
       marginTop: theme.spacing(10),
@@ -81,11 +79,39 @@ const useStyles = makeStyles((theme) => ({
     },
     titulo: {
       color: "white",
-        textShadow: "0px 0px 8px #5E45E8",
-        fontFamily: "monospace",
-        marginLeft: theme.spacing(9),
-        paddingTop: theme.spacing(4),
+      textShadow: "0px 0px 8px #5E45E8",
+      marginTop: theme.spacing(6),
+      marginBottom: theme.spacing(-5),
+      fontFamily: "monospace",
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "3rem",
+      },
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "2rem",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",   
+      },
     },
+    contenedorTitulo: {
+      "& h3":{
+        [theme.breakpoints.down("lg")]: {
+          fontSize: "3rem",
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "left",
+          textAlign: "left",
+          marginLeft: theme.spacing(7)
+        },
+        [theme.breakpoints.down("sm")]: {
+          fontSize: "2rem",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginLeft: theme.spacing(0)
+      },
+    }
+  },
     datos: {
       marginTop: theme.spacing(3),
       display: "flex",
@@ -96,47 +122,148 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
     },
     card: {
-      height: "30%",
-      width: "80%",
-      display: "flex",
-      flexDirection: "row", 
-      paddingTop: theme.spacing(1),
-      margin: "auto",
       backgroundColor: "#2a44b74a",
       border: "1px solid #446eff",
-      alignItems: "center",
-      color: "white"
+      color: "white",
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "3rem",
+        height: "30%",
+        width: "80%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingTop: theme.spacing(1),
+        margin: "auto",
+      },
+      [theme.breakpoints.down("md")]: {
+        fontSize: "2rem",
+        height: "30%",
+        width: "80%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingTop: theme.spacing(1),
+        margin: "auto",
+      },
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "2rem",
+        height: "30%",
+        width: "80%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingTop: theme.spacing(1),
+        margin: "auto",
+      },
     },
     correo:{
-      height: 25,
-      width: 25,
-      marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(1),
-      marginBottom: theme.spacing(1),
-      color: "white"
+      [theme.breakpoints.down("lg")]: {
+        height: 30,
+        width: 30,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "left",
+        marginRight: theme.spacing(3),
+        marginBottom: theme.spacing(1),
+      },
+      [theme.breakpoints.down("md")]: {
+        height: 30,
+        width: 30,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        marginRight: theme.spacing(1),
+        marginBottom: theme.spacing(1),
+      },
+      [theme.breakpoints.down("sm")]: {
+        height: 30,
+        width: 30,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "left",
+        marginRight: theme.spacing(1),
+        marginBottom: theme.spacing(1),
+      },
     },
     contenido: {
-      fontSize: "1.2rem",
+      fontSize: "1rem",
     },
     card1: {
-      height: "30%",
-      width: "80%",
-      display: "flex",
-      flexDirection: "row",
-      marginTop: theme.spacing(3), 
-      paddingTop: theme.spacing(1),
-      margin: "auto",
       backgroundColor: "#2a44b74a",
       border: "1px solid #446eff",
-      alignItems: "center",
-      color: "white"
+      color: "white",
+      paddingTop: theme.spacing(1),
+      [theme.breakpoints.down("lg")]: {
+        fontSize: "3rem",
+        height: "30%",
+        width: "80%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: theme.spacing(2),
+        paddingTop: theme.spacing(1),
+        margin: "auto",
+      },
+      [theme.breakpoints.down("md")]: {
+        fontSize: "2rem",
+        height: "30%",
+        width: "80%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: theme.spacing(2),
+        paddingTop: theme.spacing(1),
+        margin: "auto",
+      },
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "2rem",
+        height: "30%",
+        width: "80%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: theme.spacing(2),
+        paddingTop: theme.spacing(1),
+        margin: "auto",
+      },
     },
     image: {
-      width: 35,
-      height: 35,
-      marginLeft: theme.spacing(0.5),
-      marginRight: theme.spacing(1),
-      marginBottom: theme.spacing(1)
+      [theme.breakpoints.down("lg")]: {
+        height: 40,
+        width: 40,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "left",
+        marginRight: theme.spacing(10),
+        marginBottom: theme.spacing(1),
+      },
+      [theme.breakpoints.down("md")]: {
+        height: 40,
+        width: 40,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "left",
+        marginRight: theme.spacing(5),
+        marginBottom: theme.spacing(1),
+      },
+      [theme.breakpoints.down("sm")]: {
+        height: 40,
+        width: 40,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "left",
+        marginRight: theme.spacing(8),
+        marginBottom: theme.spacing(1),
+      },
     },
     image1: {
       width: 100,

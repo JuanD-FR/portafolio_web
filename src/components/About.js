@@ -76,17 +76,20 @@ const useStyles = makeStyles((theme) => ({
         textShadow: "0px 0px 8px #5E45E8",
         marginTop: theme.spacing(6),
         fontFamily: "monospace",
-        marginLeft: theme.spacing(5),
         "& h3":{
+            [theme.breakpoints.down("lg")]: {
+                fontSize: "3rem",
+                marginLeft: theme.spacing(5),
+            },
             [theme.breakpoints.down("md")]: {
-                fontSize: "2.5rem"
+                fontSize: "3rem",
+                marginLeft: theme.spacing(5),
             },
             [theme.breakpoints.down("sm")]: {
-                fontSize: "1.5rem",
+                fontSize: "2rem",
                 display: "flex",
-                flexDirection: "column",
                 justifyContent: "center",
-                alignItems: "center",
+                marginLeft: 0
             },
         }
     },
@@ -105,10 +108,10 @@ const useStyles = makeStyles((theme) => ({
             fontSize: "1.5rem"
         },
         [theme.breakpoints.down("md")]: {
-            fontSize: "1.2rem"
+            fontSize: "1.3rem"
         },
         [theme.breakpoints.down("sm")]: {
-            fontSize: "0.9rem"
+            fontSize: "1rem"
         },
     }
   }))

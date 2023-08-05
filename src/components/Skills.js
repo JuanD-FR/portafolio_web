@@ -8,8 +8,10 @@ const classes = useStyles();
   return (
     <div className={ `${classes.section} ${ dark && classes.sectiondark }` }>
       <div className={ classes.sectioncontent } id={ id }>
-        <Card className={classes.card }>
+        <div className={ classes.contenedorLetra }>
           <Typography variant="h3" className={ classes.letra }>{ title }</Typography>
+        </div>
+        <Card className={classes.card }>
           <Technologies />
         </Card>
       </div>
@@ -27,6 +29,11 @@ const useStyles = makeStyles((theme) => ({
         color: "white",
         fontFamily: "monospace",  
     },
+    card: {
+      height: "100%",
+      position: "relative",
+      backgroundColor: "transparent",
+    },
   letra: {
     display: "flex",
     flexDirection: "column",
@@ -38,19 +45,27 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "monospace",
     paddingLeft: theme.spacing(7),
     paddingTop: theme.spacing(7),
-    "& h3":{
-        [theme.breakpoints.down("md")]: {
-            fontSize: "2.5rem"
-        },
-        [theme.breakpoints.down("sm")]: {
-            fontSize: "1.5rem",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-        },
-    }
 },
+contenedorLetra: {
+  "& h3":{
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "3rem",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "3rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2rem",
+      paddingLeft: theme.spacing(0),
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      marginLeft: "auto", 
+      marginRight: "auto", 
+  },
+}
+}
   }))
 
 export default Skills
