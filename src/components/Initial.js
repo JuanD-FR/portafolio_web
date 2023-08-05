@@ -17,14 +17,12 @@ const Initial = ({ title, id, dark }) => {
                             <div className={ classes.divcontent1 }>
                                 <TypeWriterEffect 
                                     text="Hi, I'm Juan David"
-                                    textStyle= { {fontSize: "3rem", fontWeight: "700px", color: "white", fontFamily: "Monospace"} }
                                     startDelay={ 100 }
                                     cursorColor="black"
                                     typeSpeed={ 50 }
                                 />
                                 <TypeWriterEffect                             
-                                    text="Front End Developer..."
-                                    textStyle= { {fontSize: "3rem", fontWeight: "500px", color:"white", fontFamily: "Monospace"} }
+                                    text="Front End Developer"
                                     startDelay={ 1200 }
                                     cursorColor="black"
                                     typeSpeed={ 50 }
@@ -47,7 +45,7 @@ const Initial = ({ title, id, dark }) => {
 
 const useStyles = makeStyles((theme) => ({
     section: {
-        minHeight: "100vh",
+        Height: "100%",
         width: "auto", 
     },
     sectiondark: {
@@ -56,30 +54,31 @@ const useStyles = makeStyles((theme) => ({
     card1: {
         height: "90vh",
         display: "flex",
+        justifyContent: "center",
         position: "relative",
         backgroundColor: "transparent",
     },
     cardcontent: {
-        marginTop: theme.spacing(10),
-        marginRight: theme.spacing(2),
-        paddingBottom: theme.spacing(10),
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
     },   
     divcontent1: {
-        marginLeft: theme.spacing(55),
-        marginTop: theme.spacing(5),
         backgroundColor: "transparent",
         textShadow: "0px 0px 8px #5E45E8",
-        [theme.breakpoints.down("lg")]: {
-            padding: theme.spacing(10),
-            marginLeft: theme.spacing(45),
-        },
+        fontSize: "1.5rem",
+        color: "white",
+        fontFamily: "monospace",
         [theme.breakpoints.down("md")]: {
-            padding: theme.spacing(10),
-            marginLeft: theme.spacing(20),
+            fontSize: "1.2rem", 
         },
         [theme.breakpoints.down("sm")]: {
-            padding: theme.spacing(10),
-            marginLeft: theme.spacing(5),
+            fontSize: "0.8rem",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
         },
     },
     pdfbutton: {
@@ -100,15 +99,6 @@ const useStyles = makeStyles((theme) => ({
         "& a:hover": {
             color: "#fff"
         },
-        [theme.breakpoints.down("md")]: {
-            bottom: "2rem",
-            right: "4rem",
-        },
-        [theme.breakpoints.down("sm")]: {
-            bottom: "2rem",
-            right: "4rem",
-        },
-        
     },
     backgroundImage: {
         width: "auto"

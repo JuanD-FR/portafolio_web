@@ -22,7 +22,7 @@ function App() {
     <>
         <MuiThemeProvider theme= { theme }>
         <NavBar/>
-          <div >
+          <div>
             <Inital title="Initial" id="about" dark={true}/>
             <About title="About me" id="about" dark={true} />
             <Skills title="My skills" id="skills" dark={true} />
