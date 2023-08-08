@@ -21,10 +21,10 @@ const About = ({ title, id, dark }) => {
                                             - Outstanding both in individual and team work.
                                         </ListItem>
                                         <ListItem className={ classes.letras }>
-                                            - Always open suggestions in order to improve my results.
+                                            - Always open to suggestions in order to improve my results.
                                         </ListItem>
                                         <ListItem className={ classes.letras }>
-                                            - Itermediate english level.
+                                            - English (B2)
                                         </ListItem>
                                         <ListItem className={ classes.letras }>
                                             - Since 2021, studying and learning programming for web development.
