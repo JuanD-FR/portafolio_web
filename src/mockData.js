@@ -8,6 +8,7 @@ import supersmash from "./imagenes/ssb.png"
 import afa from "./imagenes/AFApp.png"
 import form1 from "./imagenes/form1.png"
 import bbq from "./imagenes/bbq.png"
+import gtr from "./imagenes/gtr.png"
 
 const mockData = [
     {
@@ -72,6 +73,13 @@ const mockData = [
         link: "https://juand-fr.github.io/addition_function_app/",
         description: "Variant of the Click Counter App. Coded with ReactJS...",
         description1: "Much like the Click Counter App, but in this case, you add to the counter the number that you want the counter to go up. It adds up each number you click, so at the end you'll have as a result the sum of each click number you executed."
+    },
+    {
+        title: "Guitar Brochure App",
+        image: gtr,
+        link: "https://guitar-brochure.netlify.app",
+        description: "Guitar Brochure. Coded with ReactJS...",
+        description1: "App that allows login and navigation throughout diferent pages containing diferent guitar brand information."
     },
 ]
 

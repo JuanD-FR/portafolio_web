@@ -3,7 +3,6 @@ import React from 'react'
 import "../App.css"
 import { Helmet } from 'react-helmet';
 
-
 const About = ({ title, id, dark }) => {
     const classes = useStyles(); 
     return (
