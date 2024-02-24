@@ -16,7 +16,7 @@ const mockData = [
         title: "Journal App",
         image: japp,
         link: "https://mypersonaljournal-app.netlify.app",
-        description: "Jorunal App. Coded with ReactJS...",
+        description: "Journal App. Coded with ReactJS and using Firebase...",
         description1: "App that allows login and managing your own journal. Works with Firebase operations for authentication methods."
     },
     {
