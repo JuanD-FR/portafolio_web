@@ -9,14 +9,29 @@ import afa from "./imagenes/AFApp.png"
 import form1 from "./imagenes/form1.png"
 import bbq from "./imagenes/bbq.png"
 import gtr from "./imagenes/gtr.png"
+import japp from "./imagenes/japp.png"
 
 const mockData = [
     {
-        title: "Calculator App",
-        image: calc,
-        link: "https://juand-fr.github.io/Calculadora/",
-        description: "App featuring a basic calculator. Coded with ReactJS...",
-        description1: "App featuring a basic calculator with adding, subtracting, multiplying, dividing and clearing functions."
+        title: "Journal App",
+        image: japp,
+        link: "https://mypersonaljournal-app.netlify.app",
+        description: "Jorunal App. Coded with ReactJS...",
+        description1: "App that allows login and managing your own journal. Works with Firebase operations for authentication methods."
+    },
+    {
+        title: "Guitar Brochure App",
+        image: gtr,
+        link: "https://guitar-brochure.netlify.app",
+        description: "Guitar Brochure. Coded with ReactJS...",
+        description1: "App that allows login and navigation throughout diferent pages containing diferent guitar brand information."
+    },
+    {
+        title: "OYE - Web Page",
+        image: musica,
+        link: "https://juand-fr.github.io/OYE/",
+        description: "Music listening web page. Coded only using HTML, CSS and JS...",
+        description1: "My first web development project. Web page that provides its users listening to music. Contains a Home Page, a Contact Info modal, a Sign In section and a registration form. Also, it contains a section just for searching songs and listening."
     },
     {
         title: "To-Do List App",
@@ -26,13 +41,6 @@ const mockData = [
         description1: "App featuring a To do List. Contains functions reggarding writing a specific task, adding the task to the list, scratching a completed task and deleting tasks."
     },
     {
-        title: "Click Counter App",
-        image: click ,
-        link: "https://juand-fr.github.io/contador_clicks/",
-        description: "You click, it counts. App featuring a click counter. Coded with ReactJS...",
-        description1: "App featuring a click counter containing a reset button."
-    },
-    {
         title: "GIF finder App",
         image: busca,
         link: "https://juand-fr.github.io/react-udemy-gifexpert/",
@@ -40,11 +48,11 @@ const mockData = [
         description1: "App featuring a GIF finder. The particular thing about this app is that it has a costumed hook called useFetchgifs for fetching the API of gifs."
     },
     {
-        title: "OYE - Web Page",
-        image: musica,
-        link: "https://juand-fr.github.io/OYE/",
-        description: "Music listening web page. Coded only using HTML, CSS and JS...",
-        description1: "My first web development project. Web page that provides its users listening to music. Contains a Home Page, a Contact Info modal, a Sign In section and a registration form. Also, it contains a section just for searching songs and listening."
+        title: "Calculator App",
+        image: calc,
+        link: "https://juand-fr.github.io/Calculadora/",
+        description: "App featuring a basic calculator. Coded with ReactJS...",
+        description1: "App featuring a basic calculator with adding, subtracting, multiplying, dividing and clearing functions."
     },
     {
         title: "Information Cards",
@@ -68,18 +76,18 @@ const mockData = [
         description1: "App featuring a simple form with three inputs: username, e-mail and password, and a delete button to erase the information."
     },
     {
+        title: "Click Counter App",
+        image: click ,
+        link: "https://juand-fr.github.io/contador_clicks/",
+        description: "You click, it counts. App featuring a click counter. Coded with ReactJS...",
+        description1: "App featuring a click counter containing a reset button."
+    },
+    {
         title: "Addition Function App",
         image: afa,
         link: "https://juand-fr.github.io/addition_function_app/",
         description: "Variant of the Click Counter App. Coded with ReactJS...",
         description1: "Much like the Click Counter App, but in this case, you add to the counter the number that you want the counter to go up. It adds up each number you click, so at the end you'll have as a result the sum of each click number you executed."
-    },
-    {
-        title: "Guitar Brochure App",
-        image: gtr,
-        link: "https://guitar-brochure.netlify.app",
-        description: "Guitar Brochure. Coded with ReactJS...",
-        description1: "App that allows login and navigation throughout diferent pages containing diferent guitar brand information."
     },
 ]
 
